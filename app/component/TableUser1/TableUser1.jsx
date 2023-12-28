@@ -21,7 +21,7 @@ import {PlusIcon} from "./PlusIcon";
 import {VerticalDotsIcon} from "./VerticalDotsIcon";
 import {SearchIcon} from "./SearchIcon";
 import {ChevronDownIcon} from "./ChevronDownIcon";
-import {columns, users, statusOptions} from "./data";
+import {columns, statusOptions} from "./data";
 import {capitalize} from "./utils";
 import { GetAllUser } from "@/app/redux/services/user.service";
 
@@ -115,7 +115,7 @@ useEffect(() => {
         return (
           <div className="flex flex-col">
             <p className="text-bold text-small capitalize">{cellValue}</p>
-            <p className="text-bold text-tiny capitalize text-default-400">{user.team}</p>
+            <p className="text-bold text-tiny capitalize text-default-400">{user.firstname}</p>
           </div>
         );
       case "status":
@@ -239,7 +239,7 @@ useEffect(() => {
           </div>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-default-400 text-small">Total {users.length} users</span>
+          <span className="text-default-400 text-small">Total {allUser.length} users</span>
           <label className="flex items-center text-default-400 text-small">
             Rows per page:
             <select
@@ -259,7 +259,7 @@ useEffect(() => {
     statusFilter,
     visibleColumns,
     onRowsPerPageChange,
-    users.length,
+    allUser.length,
     onSearchChange,
     hasSearchFilter,
   ]);
