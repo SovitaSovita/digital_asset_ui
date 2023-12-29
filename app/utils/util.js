@@ -5,13 +5,17 @@ export const BASE_URL2 = `http://localhost:3000`;
 export const BASE_URL_IMAGE = `http://localhost:8080/api/v1/images/PROFILE?fileName=`;
 
 
-export const TOKEN = localStorage.getItem("Token");
+let TOKEN;
+
+// Check if running on the client-side (browser)
+if (typeof window !== 'undefined') {
+  TOKEN = localStorage.getItem('Token');
+}
 
 console.log("TOKEN", TOKEN);
 const API = axios.create({
   baseURL: BASE_URL,
   headers: {
-    // Authorization: `Bearer ${localStorage.getItem("Token")}`,
     Authorization: `Bearer ${TOKEN}`,
     "Content-type": "application/json;charset=utf-8",
   },
@@ -37,7 +41,7 @@ export const Auth = axios.create({
 export const APIImage = axios.create({
   baseURL: BASE_URL,
   headers: {
-    Authorization: `Bearer ${localStorage.getItem("Token")}`,
+    Authorization: `Bearer ${TOKEN}`,
     "Content-Type": "multipart/form-data",
   },
 });
