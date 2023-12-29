@@ -3,7 +3,6 @@ export const BASE_URL = `http://localhost:8080/api/v1`;
 export const BASE_URL1 = `http://localhost:8080`;
 export const BASE_URL2 = `http://localhost:3000`;
 export const BASE_URL_IMAGE = `http://localhost:8080/api/v1/images/PROFILE?fileName=`;
-export const BASE_URL_ZIN = `http://e-certify.org`;
 
 
 export const TOKEN = localStorage.getItem("Token");

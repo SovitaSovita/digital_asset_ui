@@ -9,20 +9,18 @@
 //   {name: "ACTIONS", uid: "actions"},
 // ];
 const columns = [
-  { name: "ID", uid: "id", sortable: true },
   { name: "EMAIL", uid: "email" },
   { name: "FIRSTNAME", uid: "firstname", sortable: true },
   { name: "LASTNAME", uid: "lastname", sortable: true },
   { name: "USERNAME", uid: "username", sortable: true },
   { name: "POINT", uid: "point" },
-  { name: "STATUS", uid: "status", sortable: true },
+  { name: "APPROVE", uid: "approve"},
   { name: "ACTIONS", uid: "actions" },
 ];
 
 const statusOptions = [
-  { name: "Active", uid: "active" },
-  { name: "Paused", uid: "paused" },
-  { name: "Vacation", uid: "vacation" },
+  { name: "True", uid: "true" },
+  { name: "False", uid: "false" },
 ];
 
 // {
